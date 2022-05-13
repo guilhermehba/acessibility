@@ -1,0 +1,23 @@
+<div role="radiogroup" [attr.aria-labelledby]="id">
+  <label [attr.id]="label" class="label">{{ label }}</label>
+  <button
+    role="radio"
+    [attr.aria-checked]="value === options.YES"
+    type="button"
+    class="btn-outline-success"
+    (click)="activate(options.YES)"
+    [class.btn-success]="value === options.YES"
+    >
+    Sim
+  </button>
+  <button
+  role="radio"
+  [attr.aria-checked]="value === options.NO"
+    type="button"
+    class="btn-outline-danger"
+    (click)="activate(options.NO)"
+    [class.btn-danger]="value === options.NO"
+  >
+    Não
+  </button>
+</div>
